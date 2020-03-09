@@ -1,14 +1,12 @@
 #pragma once
 #include "Student.h"
-#include"Degree.h"
-#include<iostream>
 
 class NetworkStudent : public Student {
 public:
-	NetworkStudent();
+	//NetworkStudent();
 	NetworkStudent(string sID, string fName, string lName, string e, int a, int* numDays, Degree);
-	Degree getDegree();
-	void print();
+	Degree getDegree() override;
+	void print() override;
 
 private:
 	Degree degree;

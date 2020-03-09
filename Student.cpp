@@ -5,6 +5,16 @@ using namespace std;
 
 //constructors
 Student::Student() {}
+Student::Student(string sID, string fName, string lName, string e, int a, int* nmDays) {
+	this->studentID = sID;
+	this->firstName = fName;
+	this->lastName = lName;
+	this->email = e;
+	this->age = a;
+	this->numDays[0] = nmDays[0];
+	this->numDays[1] = nmDays[1];
+	this->numDays[2] = nmDays[2];
+}
 //Setters
 void Student::setStudentID(string sID) {
 	studentID = sID;
@@ -26,9 +36,6 @@ void Student::setNumDays(int d1, int d2, int d3) {
 	numDays[1] = d2;
 	numDays[2] = d3;
 }
-void Student::setDegreeType(string degreeType) {
-	degree = degreeType;
-}
 
 //Getters
 string Student::getStudentID() {
@@ -46,14 +53,11 @@ string Student::getEmail() {
 int Student::getAge() {
 	return age;
 }
-int Student::getNumDays() {
-	return	numDays[0];
-	numDays[1];
-	numDays[2];
+int *Student::getNumDays() {
+	return numDays;
+
 }
-Degree Student::getDegreeType() {
-	return Degree::SOFTWARE;
-}
+
 void Student::print(){}
 
 
